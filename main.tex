@@ -1,0 +1,26 @@
+\documentclass[UTF8]{ctexbook}
+\usepackage{polyglossia}
+
+\setotherlanguages{arabic}
+
+\newfontfamily\arabicfont[Script=Arabic]{MicrosoftSansSerif}
+\newfontfamily\arabicfontit[Script=Arabic]{Farisi}
+% \newfontfamily\arabicfontit[Script=Arabic]{DiwanThuluth}
+\newfontfamily\arabicfontbf[Script=Arabic]{DiwanKufi}
+
+\newcommand{\arm}[1]{\textarabic{#1}}
+\newcommand{\ait}[1]{\arabicfontit{#1}}
+\newcommand{\abf}[1]{\arabicfontbf{#1}}
+\newcommand{\ac}[2]{#2 \hspace{\stretch{1}} \arm{\Large #1}}
+
+\title{\arm{\Huge \arabicfontbf{اَللُّغَةُ الْعَرَبِيَّةُ}} \\ 阿拉伯语笔记}
+\author{}
+\date{\today}
+\begin{document}
+\maketitle
+
+\input{preface.tex}
+
+\input{ch1.tex}
+
+\end{document}
