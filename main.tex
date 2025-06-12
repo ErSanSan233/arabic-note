@@ -1,7 +1,10 @@
 \documentclass[UTF8]{ctexbook}
 \usepackage{polyglossia}
+\usepackage{tipa}
+\usepackage{multicol}
 
 \setotherlanguages{arabic}
+\setotherlanguages{english}
 
 \newfontfamily\arabicfont[Script=Arabic]{MicrosoftSansSerif}
 \newfontfamily\arabicfontit[Script=Arabic]{Farisi}
@@ -13,6 +16,8 @@
 \newcommand{\abf}[1]{\arabicfontbf{#1}}
 \newcommand{\ac}[2]{#2 \hspace{\stretch{1}} \arm{\Large #1}}
 
+\newenvironment{note}{\itshape}{}
+
 \title{\arm{\Huge \arabicfontbf{اَللُّغَةُ الْعَرَبِيَّةُ}} \\ 阿拉伯语笔记}
 \author{}
 \date{\today}
@@ -22,5 +27,6 @@
 \input{preface.tex}
 
 \input{ch1.tex}
+\input{lecon8.1.tex}
 
 \end{document}
