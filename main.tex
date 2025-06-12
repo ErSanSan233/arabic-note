@@ -7,16 +7,30 @@
 \setotherlanguages{english}
 
 \newfontfamily\arabicfont[Script=Arabic]{MicrosoftSansSerif}
-\newfontfamily\arabicfontit[Script=Arabic]{Farisi}
+\newfontfamily\arabicfontit[Script=Arabic]{WaseemLight}
 % \newfontfamily\arabicfontit[Script=Arabic]{DiwanThuluth}
 \newfontfamily\arabicfontbf[Script=Arabic]{DiwanKufi}
 
-\newcommand{\arm}[1]{\textarabic{#1}}
+\newbool{innote}
+\setbool{innote}{false}
+
+\newenvironment{note}{
+        \booltrue{innote}  
+        \itshape
+    }{
+        \boolfalse{innote} 
+    }
+
+
+\newcommand{\arm}[1]{%
+    \ifbool{innote}
+        {\textarabic{\arabicfontit{#1}}}  % 在 note 环境中使用斜体
+        {\textarabic{#1}}                 % 其他环境使用正常字体
+}
+% \newcommand{\arm}[1]{\textarabic{#1}}
 \newcommand{\ait}[1]{\arabicfontit{#1}}
 \newcommand{\abf}[1]{\arabicfontbf{#1}}
 \newcommand{\ac}[2]{#2 \hspace{\stretch{1}} \arm{\Large #1}}
-
-\newenvironment{note}{\itshape}{}
 
 \title{\arm{\Huge \arabicfontbf{اَللُّغَةُ الْعَرَبِيَّةُ}} \\ 阿拉伯语笔记}
 \author{}
