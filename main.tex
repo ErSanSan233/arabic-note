@@ -26,11 +26,15 @@
     \ifbool{innote}
         {\textarabic{\arabicfontit{#1}}}  % 在 note 环境中使用斜体
         {\textarabic{#1}}                 % 其他环境使用正常字体
-}
+} % 正文中夹杂阿语
 % \newcommand{\arm}[1]{\textarabic{#1}}
 \newcommand{\ait}[1]{\arabicfontit{#1}}
 \newcommand{\abf}[1]{\arabicfontbf{#1}}
 \newcommand{\ac}[2]{#2 \hspace{\stretch{1}} \arm{\Large #1}}
+
+\newcommand{\lecon}[1]{\fbox{P#1}} % 对应视频课程P数
+
+\newcommand{\crm}[1]{\textenglish{#1}} % 阿语环境中夹杂中文
 
 \title{\arm{\Huge \arabicfontbf{اَللُّغَةُ الْعَرَبِيَّةُ}} \\ 阿拉伯语笔记}
 \author{}
@@ -42,5 +46,7 @@
 
 \input{ch1.tex}
 \input{lecon8.1.tex}
+\input{lecon9.1.tex}
+\input{lecon10.1.tex}
 
 \end{document}
