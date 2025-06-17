@@ -2,14 +2,16 @@
 \usepackage{polyglossia}
 \usepackage{tipa}
 \usepackage{multicol}
+\usepackage{mdframed}
 
 \setotherlanguages{arabic}
 \setotherlanguages{english}
 
 \newfontfamily\arabicfont[Script=Arabic]{MicrosoftSansSerif}
+% \newfontfamily\arabicfontit[Script=Arabic]{ZapfinoArabic-Regular}
 \newfontfamily\arabicfontit[Script=Arabic]{Rakkas-Regular}
 % \newfontfamily\arabicfontit[Script=Arabic]{WaseemLight}
-% \newfontfamily\arabicfontit[Script=Arabic]{DiwanThuluth}
+% \newfontfamily\arabicfontit[Script=Arabic]{BArabicStyle}
 \newfontfamily\arabicfontbf[Script=Arabic]{DiwanKufi}
 
 \newbool{innote}
@@ -18,10 +20,12 @@
 \newenvironment{note}{
         \booltrue{innote}  
         \itshape
-        \begin{quote}
+        % \begin{quote}
+        \begin{mdframed}   
     }{
         \boolfalse{innote} 
-        \end{quote}
+        \end{mdframed}
+        % \end{quote}
     }
 
 
@@ -36,7 +40,6 @@
 \newcommand{\ac}[2]{#2 \hspace{\stretch{1}} \arm{\Large #1}}
 
 \newcommand{\lecon}[1]{\fbox{P#1}} % 对应视频课程P数
-
 \newcommand{\crm}[1]{\textenglish{#1}} % 阿语环境中夹杂中文
 
 \title{\arm{\Huge \arabicfontbf{اَللُّغَةُ الْعَرَبِيَّةُ}} \\ 阿拉伯语笔记}
