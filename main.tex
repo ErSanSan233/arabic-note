@@ -7,7 +7,8 @@
 \setotherlanguages{english}
 
 \newfontfamily\arabicfont[Script=Arabic]{MicrosoftSansSerif}
-\newfontfamily\arabicfontit[Script=Arabic]{WaseemLight}
+\newfontfamily\arabicfontit[Script=Arabic]{Rakkas-Regular}
+% \newfontfamily\arabicfontit[Script=Arabic]{WaseemLight}
 % \newfontfamily\arabicfontit[Script=Arabic]{DiwanThuluth}
 \newfontfamily\arabicfontbf[Script=Arabic]{DiwanKufi}
 
@@ -17,8 +18,10 @@
 \newenvironment{note}{
         \booltrue{innote}  
         \itshape
+        \begin{quote}
     }{
         \boolfalse{innote} 
+        \end{quote}
     }
 
 
