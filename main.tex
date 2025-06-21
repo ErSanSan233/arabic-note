@@ -2,7 +2,11 @@
 \usepackage{polyglossia}
 \usepackage{tipa}
 \usepackage{multicol}
+\usepackage{multirow} 
 \usepackage{mdframed}
+
+\usepackage{tikz}
+\usetikzlibrary{3d, arrows.meta} % 屈折变化太多了，不用3D真不行
 
 \setotherlanguages{arabic}
 \setotherlanguages{english}
@@ -20,12 +24,10 @@
 \newenvironment{note}{
         \booltrue{innote}  
         \itshape
-        % \begin{quote}
         \begin{mdframed}   
     }{
         \boolfalse{innote} 
         \end{mdframed}
-        % \end{quote}
     }
 
 
@@ -37,10 +39,15 @@
 % \newcommand{\arm}[1]{\textarabic{#1}}
 \newcommand{\ait}[1]{\arabicfontit{#1}}
 \newcommand{\abf}[1]{\arabicfontbf{#1}}
-\newcommand{\ac}[2]{#2 \hspace{\stretch{1}} \arm{\Large #1}}
+\newcommand{\ac}[2]{#2 \hspace*{\stretch{1}} \arm{\Large #1}}
 
 \newcommand{\lecon}[1]{\fbox{P#1}} % 对应视频课程P数
 \newcommand{\crm}[1]{\textenglish{#1}} % 阿语环境中夹杂中文
+
+% 表示变化方向的箭头，有两种方向
+%TODO: 统一成一个？
+\newcommand{\cto}{$\rightarrow $ }
+\newcommand{\ato}{$\leftarrow $ }
 
 \title{\arm{\Huge \arabicfontbf{اَللُّغَةُ الْعَرَبِيَّةُ}} \\ 阿拉伯语笔记}
 \author{}
