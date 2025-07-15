@@ -1,0 +1,22 @@
+% \begin{center}
+\begin{tikzpicture}[scale=0.5]
+    \draw[thick] (-2,2) -- (2,2);
+    \draw[thick] (-2,-2) -- (2,-2);
+
+    % 桌子
+    \draw (-1.5,-1) -- (1.5,-1); % 桌面
+    \draw (-1,-1) -- (-1,-2); % 左腿
+    \draw (1,-1) -- (1,-2);   % 右腿
+
+    % 吊灯的线
+    \draw (0,2) -- (0,1.5);
+
+    % 灯泡
+    \draw (0,1) circle (0.3);
+
+    % 灯罩（倒三角形）
+    \draw[fill=white] (-0.5,1) -- (0.5,1) -- (0,1.5) -- cycle;
+
+    \node[below=5pt] at (current bounding box.south) {\arm{فَوقَ الْمَكْتَبِ مِصْبَاحٌ.}};
+\end{tikzpicture}
+% \end{center}

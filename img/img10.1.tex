@@ -27,17 +27,17 @@
 \draw (H) node[vertex, label=right:{\footnotesize 他房里}\arm{فِى بَيْتِهِ}] {};
 \draw (G) node[vertex, label=below:{\footnotesize 他的俩房里} \arm{فِى بَيْتَيْهِ}] {};
 
-\draw[thick] (C) -- (D);
-\draw[thick, dashed] (E) -- (F);
-\draw[thick, dashed] (G) -- (H);
-\draw[thick, dashed] (H) -- (E);
+\draw[] (C) -- (D);
+\draw[dashed] (E) -- (F);
+\draw[dashed] (G) -- (H);
+\draw[dashed] (H) -- (E);
 
-\draw[thick, -{Stealth[length=3mm]}] (B) -- (C) node[edge label, sloped, right, rotate=180]{\footnotesize （去 \arm{ن}）};
-\draw[thick, -{Stealth[length=3mm]}, dashed] (F) -- (G)node[edge label, sloped, left, rotate=180]{\footnotesize （去 \arm{ن}）};
+\draw[-{Stealth[length=3mm]}] (B) -- (C) node[edge label, sloped, right, rotate=180]{\footnotesize （去 \arm{ن}）};
+\draw[-{Stealth[length=3mm]}, dashed] (F) -- (G)node[edge label, sloped, left, rotate=180]{\footnotesize （去 \arm{ن}）};
 
-\draw[thick, -{Stealth[length=3mm]}] (A) -- (B) node[edge label]{双};
-\draw[thick, -{Stealth[length=3mm]}] (A) -- (D) node[edge label, sloped, rotate=180]{属他};
-\draw[thick, -{Stealth[length=3mm]}, dashed] (A) -- (E) node[edge label, sloped]{宾};
+\draw[-{Stealth[length=3mm]}] (A) -- (B) node[edge label]{双};
+\draw[-{Stealth[length=3mm]}] (A) -- (D) node[edge label, sloped, rotate=180]{属他};
+\draw[-{Stealth[length=3mm]}, dashed] (A) -- (E) node[edge label, sloped]{宾};
 
 \end{tikzpicture}
 
