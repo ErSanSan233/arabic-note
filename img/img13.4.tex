@@ -1,5 +1,4 @@
-\begin{center}
-
+% \begin{center}
 \begin{tikzpicture}[
     scale=2,              % 图形缩放比例
     every node/.style={}, % 所有节点字体大小
@@ -7,7 +6,6 @@
     edge label/.style={midway, fill=white, inner sep=1pt}, % 边注释样式
 ]
 
-% 定义正方体顶点坐标（三维坐标：x, y, z）
 \coordinate (O) at (0,0,0);
 \coordinate (L) at (-1,0,0);
 \coordinate (R) at (1,0,0);
@@ -16,12 +14,11 @@
 \coordinate (B) at (0,0,1);
 \coordinate (F) at (0,0,-1);
 
-
 \draw (D) node[label=right:{\arm{تَحْتَ}}] {};
 \draw (F) node[label=above right:{\arm{أَمَامَ}}] {};
 \draw (U) node[label=left:{\arm{فَوقَ}}] {};
 \draw (B) node[label=below left:{\arm{وَرَاءَ}}] {};
-
+\draw (O) node[vertex, label=above left:{\arm{بَيْنَ}}] {};
 
 \draw[-{Stealth[length=3mm]}, dashed] (O) -- (L) node[edge label]{\footnotesize 左};
 \draw[] (O) -- (D) node[edge label]{\footnotesize 下};
@@ -30,7 +27,7 @@
 \draw[-{Stealth[length=3mm]}] (O) -- (U) node[edge label]{\footnotesize 上};
 \draw[] (O) -- (B) node[edge label, sloped]{\footnotesize 后};
 
-\draw (O) node[vertex, label=above left:{\arm{بَيْنَ}}] {};
+\node[below=5pt] at (current bounding box.south) {方位名词};
 
 \end{tikzpicture}
-\end{center}
+% \end{center}

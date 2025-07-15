@@ -4,8 +4,12 @@
 \usepackage{multicol}
 \usepackage{multirow} 
 \usepackage{mdframed}
+\usepackage{longtable}
+
+\usepackage{enumitem} %阿语字体有时缺itemize引导符的字形
 
 \usepackage{color}
+\usepackage{graphicx}
 
 \usepackage{tikz}
 \usetikzlibrary{3d, arrows.meta} % 屈折变化太多了，不用3D真不行
@@ -29,6 +33,7 @@
 %% 自己的感悟笔记
 \newenvironment{note}{
     \itshape
+    \setlength{\parindent}{0pt}
     \begin{mdframed}[linewidth=0pt, backgroundcolor=gray!15]
 }{
     \end{mdframed}
@@ -37,6 +42,7 @@
 %% 课上的强调
 \newenvironment{attention}{
     \itshape
+    \setlength{\parindent}{0pt}
     \begin{mdframed}[
         leftline=true,
         rightline=false,
@@ -49,13 +55,12 @@
     \end{mdframed}
 }
 
-
 %%% 双语支持
 \newcommand{\arm}[1]{\textarabic{#1}} % 正文中夹杂阿语
 \newcommand{\ait}[1]{\itshape #1}
 \newcommand{\abf}[1]{\bfseries #1}
 \newcommand{\crm}[1]{\textenglish{#1}} % 阿语环境中夹杂中文
-\newcommand{\ac}[2]{#2 \hspace*{\stretch{1}} \arm{#1}} % 双语对照
+\newcommand{\ac}[2]{#2 \hspace*{0pt} \dotfill \hspace*{0pt} \arm{#1}} % 双语对照
 
 %%% 辅助显示
 % 表示变化方向的箭头，有两种方向
@@ -81,6 +86,7 @@
 \tableofcontents
 
 \input{ch1.tex}
+\setcounter{chapter}{7}
 \input{lecon8.tex}
 \input{lecon9.tex}
 \input{lecon10.tex}
