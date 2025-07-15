@@ -7,6 +7,7 @@
 \usepackage{longtable}
 
 \usepackage{enumitem} %阿语字体有时缺itemize引导符的字形
+\usepackage{wrapfig} % 环绕图片的正文内容
 
 \usepackage{color}
 \usepackage{graphicx}
@@ -75,8 +76,12 @@
 \newcommand{\blue}[1]{\textcolor{blue}{#1}}
 \newcommand{\red}[1]{\textcolor{red}{#1}}
 
-\title{\arm{\abf{\Huge اَللُّغَةُ الْعَرَبِيَّةُ}} \\ 阿拉伯语笔记}
-\author{}
+\title{
+    \arm{\abf{\Huge اَللُّغَةُ الْعَرَبِيَّةُ}} \\ \textbf{阿拉伯语笔记\\
+    \normalsize 基于{\tiny（已经跑路的）}万门大学《阿拉伯语初级（上）》课程整理}
+    \vfill}
+\author{
+    主讲教师：白\quad 野（\arm{مَنْصُورٌ}）}
 \date{\today}
 \begin{document}
 \maketitle
