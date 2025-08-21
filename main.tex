@@ -1,21 +1,54 @@
 \documentclass[UTF8]{ctexbook}
 \usepackage{polyglossia}
+
+% 特殊字符支持
 \usepackage{tipa}
+
+%布局
 \usepackage{multicol}
 \usepackage{multirow} 
 \usepackage{mdframed}
 \usepackage{longtable}
-
 \usepackage{enumitem} %阿语字体有时缺itemize引导符的字形
 \usepackage{wrapfig} % 环绕图片的正文内容
 \usepackage{amssymb}
 
+% 页眉页脚自定义
+\usepackage{fancyhdr}
+\usepackage{fontspec}
+
+% 突出显示和绘图
 \usepackage{color}
 \usepackage{graphicx}
-
 \usepackage{tikz}
 \usepackage{cancel} % 删除线
+
+
+% 页眉页脚格式
+% FIXME: Arabic环境下（description环境下发现的，但似乎只要是在Arabic环境就会这样）跨页时，页码字体字号会变为阿语字体，所以这里强制指定一下。然而，这样的指定不会影响到汉字，具体问AI。
+% 此外，该环境下跨页，会让节标题反向，如13.2显示为2.13。
+\pagestyle{fancy}
+\fancyhf{}
+\setlength{\headheight}{17pt}
+\renewcommand{\headrulewidth}{0pt} % 删除页眉下横线
+% 偶数页外侧页眉（左侧）显示章标题
+\fancyhead[LE]{\emph{\fontspec{FandolKai-Regular}\leftmark}}
+% 奇数页外侧页眉（右侧）显示二级标题
+\fancyhead[RO]{\emph{\fontspec{FandolKai-Regular}\rightmark}}
+% 偶数页外侧页脚（左侧）显示页码
+\fancyfoot[LE]{\fontspec{FandolSong-Regular}\thepage}
+% 奇数页外侧页脚（右侧）显示页码
+\fancyfoot[RO]{\fontspec{FandolSong-Regular}\thepage}
+
+\fancypagestyle{plain}{
+    \fancyhf{} % 清空
+    \fancyfoot[LE]{\fontspec{FandolSong-Regular}\thepage}
+    \fancyfoot[RO]{\fontspec{FandolSong-Regular}\thepage}
+}
+
+
 \usetikzlibrary{3d, arrows.meta} % 屈折变化太多了，不用3D真不行
+
 
 \setotherlanguages{arabic}
 \setotherlanguages{english}
@@ -30,17 +63,11 @@
 
 \newfontfamily\mongolianfont[
     Script=Mongolian,
+    ItalicFont=Daicing-H11,
     Scale=1.3
 ]{AbkaiXanyan}
 
-% 移至lecon14中
-% \newfontfamily\handwritingarabicfont[
-%     Script=Arabic,
-%     ItalicFont=Mishafi,
-%     Scale=1.2  
-% ]{Mishafi}
-
-%% 自己的感悟笔记
+% 自己的感悟笔记
 \newenvironment{note}{
     \itshape
     \setlength{\parindent}{0pt}
@@ -49,7 +76,7 @@
     \end{mdframed}
 }
 
-%% 课上的强调
+% 课上的强调
 \newenvironment{attention}{
     \itshape
     \setlength{\parindent}{0pt}
@@ -65,16 +92,14 @@
     \end{mdframed}
 }
 
-%%% 双语支持
+% 双语支持
 \newcommand{\arm}[1]{\textarabic{#1}} % 正文中夹杂阿语
 \newcommand{\ait}[1]{\itshape #1}
 \newcommand{\abf}[1]{\bfseries #1}
 \newcommand{\crm}[1]{\textenglish{#1}} % 阿语环境中夹杂中文
 \newcommand{\ac}[2]{#2 \hspace*{0pt} \dotfill \hspace*{0pt} \arm{#1}} % 双语对照
 
-\renewcommand{\ae}[1]{$\times $١٠\textsuperscript{#1}} % 大数章节用于缩写过多个0
-
-%%% 辅助显示
+% 辅助显示
 % 表示变化方向的箭头，有两种方向
 \newcommand{\cto}{$\rightarrow $ }
 \newcommand{\ato}{$\leftarrow $ }
@@ -83,10 +108,13 @@
 }
 
 \newcommand{\lecon}[1]{\fbox{P#1}} % 对应视频课程P数
+\renewcommand{\ae}[1]{$\times $١٠\textsuperscript{#1}} % 大数章节用于缩写过多个0
 
 \newcommand{\blue}[1]{\textcolor{blue}{#1}}
 \newcommand{\red}[1]{\textcolor{red}{#1}}
 \newcommand{\gray}[1]{\textcolor{gray}{#1}}
+
+
 
 \title{
     \arm{\abf{\Huge اَللُّغَةُ الْعَرَبِيَّةُ}} \\ \textbf{阿拉伯语笔记\\
