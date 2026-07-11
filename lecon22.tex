@@ -1,0 +1,147 @@
+\chapter{}
+
+\section{\lecon{22.2} 阿拉伯语书法}
+
+\begin{quote}
+    默德那……其书旁行，兼篆、草、楷三体，西洋诸国皆用之。
+    
+    \hfill ——《明史·西域四》
+\end{quote}
+
+\begin{itemize}
+    \item \ac{اَلْمَدِينَةُ}{麦迪那（默德那）}
+    \item \ac{اَلْكُوفَةُ}{库法} 
+    \item \ac{اَلْخَطُّ اَلْكُوفِيُّ}{库法体}
+    \item \ac{خَطُّ النَّسْخِ}{誊抄体（纳斯赫体）}
+    \item \ac{خَطَّ الثُّلُثِ}{三一体（苏鲁斯体）}
+    \item \ac{اَلْخَطُّ الْفَارِسِيُّ}{波斯体}
+    \item \ac{اَلْخَطُّ الدِّيوَانِي}{公文体（迪瓦尼体）}
+    \item \ac{خَطُّ الرُّقْعَةِ}{行书体（卢格阿体）}
+    \item \ac{بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيمِ}{奉至仁至慈的真主之名（太斯米）}
+    \item \ac{لَا إِلَهَ إِلَّا اللهُ مُحَمَّدٌ رَسُولُ اللهِ}{（清真言）} 
+    \item \ac{فَكِّرْ كَثِيرًا وَتَكَلَّمْ قَلِيلًا، تَكَلَّمْ قَلِيلًا وَافْعَلْ كَثِيرًا}{多思少言，少言多行}
+    \item \ac{اَلْمَغْرِبُ}{马格里布}
+    \item \ac{اَلْخَطُّ الْمَغْرِبِيُّ}{马格里布体}
+    \item \ac{اَلْأَنْدَلُسُ}{安达卢斯（今西班牙附近）}
+    \item \ac{اَلْخَطُّ الصِّينِيُّ}{中国体}
+    \item \ac{اَلطُّغْرَاءُ}{花押}
+\end{itemize}
+
+\begin{attention}
+    马格里布体中，\arm{فـ} 写作 \arm{ڢـ}，\arm{قـ} 写作 \arm{ڧـ}。
+\end{attention}
+
+\begin{note}
+    太斯米中，课上给出的写法是 \arm{الرَّحْمَن} 但特意强调这里的 \arm{ـمَـ} 读长音，参照下文中的太斯米独立编码的写法，此处直接记为 \arm{الرَّحْمٰنِ} 。
+\end{note}
+
+% \newfontfamily\ruq[Script=Arabic]{ArefRuqaa-Regular}
+% \begin{Arabic}
+%     \Large
+%     {\ruq فكّر كثيرًا وتكلّم قليلًا، تكلَّم قليلًا وافعل كثيرًا}
+%     % 字体测试 تــــــكلَّم قليلًا وافعل كثيرًا https://mehbarah.com/index.html
+% \end{Arabic}
+
+\newpage
+\begin{note}
+    以下不是课程内容。
+
+    \subsection*{计算机字库的支持}
+    
+    课堂上是用图片形式展示各类书法的，但现在的字库已经对各类字体做了诸多适配，不展示一下就太可惜了。以下针对课堂提到的书法字体，各选了一种能正确显示的计算机字体展示。选用标准是：字库名中必须明确指出属于哪种字体。
+
+    \newfontfamily\kuf[Script=Arabic]{DiwanKufi}
+    \newfontfamily\nas[Script=Arabic]{AdobeNaskh-Medium}
+    \newfontfamily\thu[Script=Arabic]{AThuluth}
+    \newfontfamily\far[Script=Arabic]{Farisi}
+    \newfontfamily\diw[Script=Arabic]{DiwaniLetter}
+    \newfontfamily\ruq[Script=Arabic]{ArefRuqaa-Regular}
+    \newfontfamily\magh[Script=Arabic]{AALMAGHRIBI}
+
+    \begin{center}
+        \renewcommand{\arraystretch}{1.8}
+        \begin{tabular}{c|r|c}
+            字体 & \multicolumn{1}{c|}{示例文字} & 字库名\\
+            \hline 
+            库法 & \arm{\rm \large \kuf اطلب العلم ولو في الصين} & Diwan Kufi\\
+            纳斯赫 & \arm{\rm \Large \nas اطلب العلم ولو في الصين} & Adobe Naskh\\
+            苏鲁斯 & \arm{\rm \Large \thu اطلب العلم ولو في الصين} & A Thuluth\\
+            波斯 & \arm{\rm \Large \far اطلب العلم ولو في الصين} & Farisi\\
+            迪瓦尼 & \arm{\rm \Large \diw اطلب العلم ولو في الصين} & Diwani Letter\\
+            卢格阿 & \arm{\rm \Large \ruq اطلب العلم ولو في الصين} & Aref Ruqaa\\
+            马格里布 & \arm{\rm \Large \magh اطلب العلم ولو في الصين} & AALMAGHRIBI\\
+        \end{tabular}
+        \renewcommand{\arraystretch}{1}
+    \end{center}
+    
+    \subsection*{太斯米的特殊支持}
+    
+    一些计算机字体支持特殊的太斯米 Unicode 合字字符，特展示出来。注意，每个案例都只有一个 Unicode 字符（U+FDFD），由 \LaTeX 直接编译而成。
+
+    \begin{center}
+        % \newfontfamily\tsmx{Alkalami-Regular}
+        % {\rm \large \tsmx ﷽}\\
+        % （字库：Alkalami）
+
+        % ~\\
+        \newfontfamily\tsmxi{Ruwudu-Regular}
+        {\rm \LARGE \tsmxi ﷽}\nopagebreak\\
+        （字库：Ruwudu）
+
+        ~\\
+        \newfontfamily\tsmvii{IBMPlexSansArabic-Regular}
+        {\rm \Large \tsmvii ﷽}\nopagebreak\\
+        （字库：IBM Plex Sans Arabic）
+
+        % ~\\
+        % \newfontfamily\tsmv{Firjar}
+        % {\rm \Large \tsmv ﷽}\nopagebreak\\
+        % （字库：Firjar）
+
+        ~\\
+        \newfontfamily\tsmix{HONORSansArabicUI-R}
+        {\rm \Large \tsmix ﷽}\nopagebreak\\
+        （字库：HONOR Sans Arabic UI）
+
+        ~\\
+        \newfontfamily\tsmi{NotoNaskhArabic-Regular}
+        {\rm \Huge \tsmi ﷽}\nopagebreak\\
+        （字库：Noto Naskh Arabic）
+
+        ~\\
+        \newfontfamily\tsmii{Damascus}
+        {\rm \Huge \tsmii ﷽}\nopagebreak\\
+        （字库：Damascus）
+
+        ~\\
+        \newfontfamily\tsmviii{NotoSansArabic-Regular}
+        {\rm \Huge \tsmviii ﷽}\nopagebreak\\
+        （字库：Noto Sans Arabic）
+
+        ~\\
+        \newfontfamily\tsmiv{ScheherazadeNew-Regular}
+        {\rm \Huge \tsmiv ﷽}\nopagebreak\\
+        （字库：Scheherazade New）
+
+        ~\\
+        \newfontfamily\tsmxii{Almarai-Regular}
+        {\rm \Huge \tsmxii ﷽}\nopagebreak\\
+        （字库：Almarai）
+
+        ~\\
+        \newfontfamily\tsmvi{Gulzar}
+        {\rm \huge \tsmvi ﷽}\nopagebreak\\
+        （字库：Gulzar）
+
+        % ~\\
+        % \newfontfamily\tsmiii{NotoNastaliqUrdu}
+        % {\rm \Large \tsmiii ﷽}\nopagebreak\\
+        % （字库：Noto Nastaliq Urdu）
+
+        ~\\
+    \end{center}
+    
+\end{note}
+
+
+
