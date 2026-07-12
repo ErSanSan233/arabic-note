@@ -69,8 +69,8 @@
 % 自己的感悟笔记
 \newenvironment{note}{
     \itshape
-    \setlength{\parindent}{0pt}
     \begin{mdframed}[linewidth=0pt, backgroundcolor=gray!15]
+    \setlength{\parindent}{2em}
     }{
     \end{mdframed}
 }
@@ -78,15 +78,18 @@
 % 课上的强调
 \newenvironment{attention}{
     \itshape
-    \setlength{\parindent}{0pt}
     \begin{mdframed}[
         leftline=true,
+        % leftline=false,
         rightline=false,
         topline=false,
         bottomline=false,
         linecolor=gray!50,
         linewidth=3pt
     ]
+    \setlength{\parindent}{0pt}
+    \everypar{\makebox[1.2em][l]{\textcolor{gray!70}{$\rightsquigarrow $}}}
+    \ignorespaces
     }{
     \end{mdframed}
 }
