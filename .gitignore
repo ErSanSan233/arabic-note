@@ -320,3 +320,5 @@ TSWLatexianTemp*
 #*Notes.bib
 main.pdf
 .DS_Store
+*.sfd
+*.ttf

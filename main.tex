@@ -57,8 +57,10 @@
     Script=Arabic, 
     BoldFont=KufiStandardGK, 
     ItalicFont=NotoNaskhArabic-Regular,
-    Scale=1.2]
-{MicrosoftSansSerif}
+    % SlantedFont=BisbeeTrial-Thin,
+    Scale=1.1]
+{notosansrefill} % {MicrosoftSansSerif}
+% 本项目的正文阿语字体是Noto Sans Arabic Regular，其中缺失的字符使用Noto Sans Regular替代。两个字库都是开放使用的，但出于某种技术原因，我这里不能公开更多细节，如果要自行编译，可以从网络获取Microsoft Sans Serif字体作为替代，并将这里的{notosansrefill}换成注释中的{MicrosoftSansSerif}。
 
 \newfontfamily\mongolianfont[
     Script=Mongolian,
@@ -68,6 +70,7 @@
 
 % 自己的感悟笔记
 \newenvironment{note}{
+    % \slshape
     \itshape
     \begin{mdframed}[linewidth=0pt, backgroundcolor=gray!15]
     \setlength{\parindent}{2em}
@@ -84,11 +87,11 @@
         rightline=false,
         topline=false,
         bottomline=false,
-        linecolor=gray!50,
-        linewidth=3pt
+        linecolor=gray!60,
+        linewidth=2pt
     ]
     \setlength{\parindent}{0pt}
-    \everypar{\makebox[1.2em][l]{\textcolor{gray!70}{$\rightsquigarrow $}}}
+    \everypar{\makebox[1.2em][l]{\textcolor{gray!50}{$\vartriangleright  $}}}
     \ignorespaces
     }{
     \end{mdframed}
